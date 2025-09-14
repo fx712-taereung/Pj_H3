@@ -1,0 +1,597 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
+    color: #262626;
+    line-height: 1.4;
+}
+
+/* Main App Container - Full Screen Layout */
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* Left Sidebar */
+.sidebar {
+    width: 245px;
+    min-width: 245px;
+    background-color: #ffffff;
+    border-right: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sidebar-header {
+    padding: 25px 16px 16px 16px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #262626;
+    font-style: italic;
+}
+
+.sidebar-menu {
+    flex: 1;
+    list-style: none;
+    padding: 8px 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 8px;
+    margin: 0 8px;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item.active {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+.menu-item .icon {
+    font-size: 24px;
+    margin-right: 16px;
+    width: 24px;
+    text-align: center;
+}
+
+.menu-item .text {
+    font-size: 16px;
+    color: #262626;
+}
+
+.sidebar-footer {
+    padding: 8px 0 16px 0;
+    border-top: 1px solid #dbdbdb;
+    margin-top: auto;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    background-color: #fafafa;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 0;
+    max-width: calc(100vw - 245px - 320px);
+}
+
+/* Stories Container */
+.stories-container {
+    display: flex;
+    gap: 18px;
+    padding: 24px 0 24px 24px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin: 24px 24px 24px 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.stories-container::-webkit-scrollbar {
+    display: none;
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 74px;
+    cursor: pointer;
+}
+
+.story-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    padding: 2px;
+    margin-bottom: 6px;
+}
+
+.story-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    object-fit: cover;
+}
+
+.story-username {
+    font-size: 12px;
+    color: #262626;
+    text-align: center;
+    max-width: 74px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Feed Container */
+.feed-container {
+    padding: 0 24px 24px 24px;
+}
+
+/* Post Styles */
+.post {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid #efefef;
+}
+
+.post-user-info {
+    display: flex;
+    align-items: center;
+}
+
+.post-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.post-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+    margin-right: 8px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.post-options {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    color: #262626;
+}
+
+.post-image {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.action-btn, .save-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    color: #262626;
+    transition: transform 0.1s ease;
+}
+
+.action-btn:hover, .save-btn:hover {
+    transform: scale(1.1);
+}
+
+.post-stats {
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.likes-count {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+}
+
+.post-content {
+    padding: 0 16px;
+    margin-bottom: 8px;
+}
+
+.post-content .post-username {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.post-caption {
+    font-size: 14px;
+    color: #262626;
+    line-height: 1.4;
+}
+
+.post-comments {
+    padding: 0 16px 16px 16px;
+}
+
+.view-comments {
+    font-size: 14px;
+    color: #8e8e8e;
+    cursor: pointer;
+}
+
+.view-comments:hover {
+    text-decoration: underline;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 320px;
+    min-width: 320px;
+    background-color: #fafafa;
+    padding: 24px 24px 0 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.user-suggestion {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.suggestion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.suggestion-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.see-all-btn {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.suggestion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+}
+
+.suggestion-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.suggestion-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestion-username {
+    font-weight: 600;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 2px;
+}
+
+.suggestion-relation {
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.follow-btn {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.follow-btn:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.links-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-bottom: 12px;
+}
+
+.links-list a {
+    font-size: 11px;
+    color: #c7c7c7;
+    text-decoration: none;
+}
+
+.links-list a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #c7c7c7;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .right-sidebar {
+        display: none;
+    }
+    
+    .main-content {
+        max-width: calc(100vw - 245px);
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 72px;
+        min-width: 72px;
+    }
+    
+    .sidebar .text {
+        display: none;
+    }
+    
+    .sidebar-header {
+        padding: 25px 8px 16px 8px;
+        text-align: center;
+    }
+    
+    .logo h1 {
+        font-size: 18px;
+    }
+    
+    .menu-item {
+        padding: 12px 8px;
+        justify-content: center;
+        margin: 0 4px;
+    }
+    
+    .menu-item .icon {
+        margin-right: 0;
+    }
+    
+    .main-content {
+        max-width: calc(100vw - 72px);
+    }
+    
+    .stories-container,
+    .feed-container {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    
+    .stories-container {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 60px;
+        min-width: auto;
+        flex-direction: row;
+        border-right: none;
+        border-top: 1px solid #dbdbdb;
+        z-index: 1000;
+        overflow-x: auto;
+        background-color: #ffffff;
+    }
+    
+    .sidebar-header {
+        display: none;
+    }
+    
+    .sidebar-footer {
+        display: none;
+    }
+    
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .menu-item {
+        flex: 1;
+        flex-direction: column;
+        padding: 8px 4px;
+        margin: 0;
+        min-width: 0;
+    }
+    
+    .menu-item .icon {
+        font-size: 20px;
+        margin-right: 0;
+        margin-bottom: 2px;
+    }
+    
+    .menu-item .text {
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .main-content {
+        max-width: 100vw;
+        padding-bottom: 60px;
+    }
+    
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .stories-container,
+    .feed-container {
+        margin: 12px;
+        padding: 12px;
+    }
+}
+
+/* Smooth scrolling */
+.main-content {
+    scroll-behavior: smooth;
+}
+
+/* Loading states and hover effects */
+.post-image img,
+.story-avatar img,
+.post-avatar,
+.suggestion-avatar {
+    transition: opacity 0.3s ease;
+}
+
+/* Focus states for accessibility */
+.menu-item:focus,
+.action-btn:focus,
+.follow-btn:focus,
+.see-all-btn:focus {
+    outline: 2px solid #0095f6;
+    outline-offset: 2px;
+}
+
+/* Custom scrollbar for webkit browsers */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.right-sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.right-sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.right-sidebar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.right-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

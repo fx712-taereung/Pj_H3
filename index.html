@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H3 Social - Instagram-like Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h1>H3 Social</h1>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <span class="icon">🏠</span>
+                    <span class="text">홈</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">🔍</span>
+                    <span class="text">검색</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">🧭</span>
+                    <span class="text">탐색</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">🎬</span>
+                    <span class="text">릴스</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">💬</span>
+                    <span class="text">메시지</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">❤️</span>
+                    <span class="text">알림</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">➕</span>
+                    <span class="text">만들기</span>
+                </li>
+                <li class="menu-item">
+                    <span class="icon">👤</span>
+                    <span class="text">프로필</span>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <div class="menu-item">
+                    <span class="icon">☰</span>
+                    <span class="text">더보기</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Stories Section -->
+            <div class="stories-container">
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <img src="https://via.placeholder.com/56/FF6B6B/ffffff?text=내" alt="내 스토리">
+                    </div>
+                    <span class="story-username">내 스토리</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <img src="https://via.placeholder.com/56/4ECDC4/ffffff?text=U1" alt="사용자1">
+                    </div>
+                    <span class="story-username">사용자1</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <img src="https://via.placeholder.com/56/45B7D1/ffffff?text=U2" alt="사용자2">
+                    </div>
+                    <span class="story-username">사용자2</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <img src="https://via.placeholder.com/56/96CEB4/ffffff?text=U3" alt="사용자3">
+                    </div>
+                    <span class="story-username">사용자3</span>
+                </div>
+                <div class="story-item">
+                    <div class="story-avatar">
+                        <img src="https://via.placeholder.com/56/FFEAA7/ffffff?text=U4" alt="사용자4">
+                    </div>
+                    <span class="story-username">사용자4</span>
+                </div>
+            </div>
+
+            <!-- Feed Posts -->
+            <div class="feed-container">
+                <!-- Post 1 -->
+                <article class="post">
+                    <header class="post-header">
+                        <div class="post-user-info">
+                            <img src="https://via.placeholder.com/32/FF6B6B/ffffff?text=U1" alt="사용자1" class="post-avatar">
+                            <span class="post-username">사용자1</span>
+                            <span class="post-time">2시간 전</span>
+                        </div>
+                        <button class="post-options">⋯</button>
+                    </header>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/600x600/4ECDC4/ffffff?text=Post+Image+1" alt="게시물 이미지">
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-buttons">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">💬</button>
+                            <button class="action-btn">📤</button>
+                        </div>
+                        <button class="save-btn">🔖</button>
+                    </div>
+                    <div class="post-stats">
+                        <span class="likes-count">좋아요 127개</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-username">사용자1</span>
+                        <span class="post-caption">멋진 하루였어요! 다들 좋은 하루 보내세요 ✨ #일상 #행복</span>
+                    </div>
+                    <div class="post-comments">
+                        <span class="view-comments">댓글 15개 모두 보기</span>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="post">
+                    <header class="post-header">
+                        <div class="post-user-info">
+                            <img src="https://via.placeholder.com/32/45B7D1/ffffff?text=U2" alt="사용자2" class="post-avatar">
+                            <span class="post-username">사용자2</span>
+                            <span class="post-time">4시간 전</span>
+                        </div>
+                        <button class="post-options">⋯</button>
+                    </header>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/600x600/96CEB4/ffffff?text=Post+Image+2" alt="게시물 이미지">
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-buttons">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">💬</button>
+                            <button class="action-btn">📤</button>
+                        </div>
+                        <button class="save-btn">🔖</button>
+                    </div>
+                    <div class="post-stats">
+                        <span class="likes-count">좋아요 89개</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-username">사용자2</span>
+                        <span class="post-caption">오늘의 카페 🍵 분위기가 정말 좋네요</span>
+                    </div>
+                    <div class="post-comments">
+                        <span class="view-comments">댓글 8개 모두 보기</span>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="post">
+                    <header class="post-header">
+                        <div class="post-user-info">
+                            <img src="https://via.placeholder.com/32/FFEAA7/ffffff?text=U3" alt="사용자3" class="post-avatar">
+                            <span class="post-username">사용자3</span>
+                            <span class="post-time">6시간 전</span>
+                        </div>
+                        <button class="post-options">⋯</button>
+                    </header>
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/600x600/DDA0DD/ffffff?text=Post+Image+3" alt="게시물 이미지">
+                    </div>
+                    <div class="post-actions">
+                        <div class="action-buttons">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">💬</button>
+                            <button class="action-btn">📤</button>
+                        </div>
+                        <button class="save-btn">🔖</button>
+                    </div>
+                    <div class="post-stats">
+                        <span class="likes-count">좋아요 203개</span>
+                    </div>
+                    <div class="post-content">
+                        <span class="post-username">사용자3</span>
+                        <span class="post-caption">새로운 취미 시작! 🎨 그림 그리기가 이렇게 재미있을 줄 몰랐어요</span>
+                    </div>
+                    <div class="post-comments">
+                        <span class="view-comments">댓글 22개 모두 보기</span>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="user-suggestion">
+                <div class="suggestion-header">
+                    <span class="suggestion-title">회원님을 위한 추천</span>
+                    <button class="see-all-btn">모두 보기</button>
+                </div>
+                <div class="suggestion-list">
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/32/FF9FF3/ffffff?text=S1" alt="추천 사용자" class="suggestion-avatar">
+                        <div class="suggestion-info">
+                            <span class="suggestion-username">추천사용자1</span>
+                            <span class="suggestion-relation">사용자2님이 팔로우합니다</span>
+                        </div>
+                        <button class="follow-btn">팔로우</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/32/54A0FF/ffffff?text=S2" alt="추천 사용자" class="suggestion-avatar">
+                        <div class="suggestion-info">
+                            <span class="suggestion-username">추천사용자2</span>
+                            <span class="suggestion-relation">사용자1님이 팔로우합니다</span>
+                        </div>
+                        <button class="follow-btn">팔로우</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/32/5F27CD/ffffff?text=S3" alt="추천 사용자" class="suggestion-avatar">
+                        <div class="suggestion-info">
+                            <span class="suggestion-username">추천사용자3</span>
+                            <span class="suggestion-relation">Facebook 친구</span>
+                        </div>
+                        <button class="follow-btn">팔로우</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/32/00D2D3/ffffff?text=S4" alt="추천 사용자" class="suggestion-avatar">
+                        <div class="suggestion-info">
+                            <span class="suggestion-username">추천사용자4</span>
+                            <span class="suggestion-relation">추천 친구</span>
+                        </div>
+                        <button class="follow-btn">팔로우</button>
+                    </div>
+                    <div class="suggestion-item">
+                        <img src="https://via.placeholder.com/32/FF3838/ffffff?text=S5" alt="추천 사용자" class="suggestion-avatar">
+                        <div class="suggestion-info">
+                            <span class="suggestion-username">추천사용자5</span>
+                            <span class="suggestion-relation">사용자3님이 팔로우합니다</span>
+                        </div>
+                        <button class="follow-btn">팔로우</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-list">
+                    <a href="#">소개</a>
+                    <a href="#">도움말</a>
+                    <a href="#">홍보 센터</a>
+                    <a href="#">API</a>
+                    <a href="#">채용 정보</a>
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">약관</a>
+                    <a href="#">위치</a>
+                    <a href="#">언어</a>
+                </div>
+                <div class="copyright">
+                    <span>© 2024 H3 SOCIAL</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
